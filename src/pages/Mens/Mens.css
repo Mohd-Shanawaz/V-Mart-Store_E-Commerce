@@ -1,0 +1,57 @@
+.mens-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.mens-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mens-products {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mens-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.mens-card:hover {
+  transform: translateY(-5px);
+}
+
+.mens-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.buy-btn {
+  background-color: #1e40af;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.buy-btn:hover {
+  background-color: #1a357e;
+}

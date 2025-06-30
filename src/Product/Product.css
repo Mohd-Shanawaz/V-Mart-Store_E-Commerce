@@ -1,0 +1,41 @@
+.card{
+    width: 270px;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+    padding: 10px;
+    border-radius: 5px;
+}
+.card h4{
+    margin: 10px 0px;
+    color: green;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.card p{
+    margin-bottom: 7px;
+}
+.card button{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px 15px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+#addtocart{
+    background-color: lightsalmon;
+}
+#addtocart:hover{
+    background-color: coral;
+}
+#details{
+    background-color: beige;
+}
+#details:hover{
+    background-color: rgb(253, 213, 165);
+}
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 20px;
+}

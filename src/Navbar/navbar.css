@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+}
+.head{
+    height: 110px;
+    background-color: black;
+    font-family: cursive;
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    color: white;
+    width:33%;
+    text-align: center;
+    text-align: center;
+    margin-top:20px ;
+}
+.logo h1{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#links{
+    width: 50%;
+    font-size: x-large;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+ a{
+    text-decoration: none;
+    color:white;
+    display: flex;
+}
+#opt{
+    width: 20%;
+    text-align: right;
+    margin-top:20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#opt button{
+  border: 3px solid red;
+  outline: none;
+  color: red;
+  padding:10px;
+  border-radius: 5px;
+  font-size: 17px;
+  height: 50px;
+  font-weight: bold;
+  background: none;
+}
+ i{
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top:7px;
+}
+#links a:hover{
+    color: blue;
+    transform: scale(1.1);
+}
+#links a:active{
+    color: greenyellow;
+}
+#opt i:hover{
+    color: yellow;
+}
+#opt button:hover{
+    background-color: red;
+    color:white;
+    transform: scale(1.1);
+}

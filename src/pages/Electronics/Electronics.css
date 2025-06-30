@@ -1,0 +1,58 @@
+.electronics-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #eef4f8;
+  color: #333;
+}
+
+.electronics-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.electronics-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.electronics-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.electronics-card:hover {
+  transform: translateY(-5px);
+}
+
+.electronics-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #007acc;
+}
+
+.buy-btn {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background-color: #005fa3;
+}

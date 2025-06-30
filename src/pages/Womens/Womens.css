@@ -1,0 +1,58 @@
+.womens-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff4f8;
+  color: #333;
+}
+
+.womens-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.womens-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.womens-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.womens-card:hover {
+  transform: translateY(-6px);
+}
+
+.womens-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #e91e63;
+}
+
+.buy-btn {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background-color: #c2185b;
+}

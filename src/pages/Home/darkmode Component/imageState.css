@@ -1,0 +1,73 @@
+#container {
+  display: flex;
+  margin: 2px auto;
+  padding: 20px;
+  gap: 50px;
+  width: 90%;
+  border: 2px solid black;
+}
+#container .image {
+  width: 30%;
+  height: 400px;
+  padding: 30px;
+  margin: 0px auto;
+}
+#container .des {
+  width: 60%;
+  text-align: left;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 0px 50px;
+}
+span {
+  margin-top: -20px;
+  font-size: 2rem;
+}
+dt {
+  font-size: 2rem;
+}
+img {
+  border: 2px solid black;
+  border-radius: 20px ;
+}
+#checkbox{
+  padding: 30px;
+}
+button {
+    font-size: large;
+    padding: 5px 10px;
+    margin-left: 100px;
+    border-radius: 5px;
+}
+.light-mode {
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+.light-mode img{
+    box-shadow: 0 0 40px 5px black;
+}
+.light-mode button{
+    background-color: #121212;
+    color: white;
+}
+.dark-mode {
+  background-color: #010101;
+  color: green;
+  padding: 20px;
+}
+.dark-mode img{
+    box-shadow: 0 0 40px 5px white;
+}
+.dark-mode span {
+  color: rgb(255, 255, 255);
+}
+.dark-mode h3 {
+  color: white;
+}
+.dark-mode p {
+  color: blue;
+}
+.dark-mode button{
+    background-color: goldenrod;
+    color: blue;
+}
