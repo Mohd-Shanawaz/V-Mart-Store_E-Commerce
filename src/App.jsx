@@ -4,26 +4,24 @@ import HomePage from "./pages/Home/Home";
 import Mens from "./pages/Mens/Mens";
 import Womens from "./pages/Womens/Womens";
 import Electronics from "./pages/Electronics/Electronics";
+import JewelryPage from "./pages/Jwellery/Jwellery";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
-import Map from "./pages/Map/Map";
-import ProductsComponent from "./Products/Products";
-// import Updatehead from "./state/state";
-// import ImageState from "./state/imagestate";
-// import SwitchModes from "./pages/Home/darkmode Component/imageState";
+import CartComponent from "./Navbar/Carts/Carts";
+import UserProfile from "./Navbar/Profile-Page/UserProfile";
 
-function App(){
+export default function App(){
     return <div>
         <Navbar/>
-        <ProductsComponent/>
         <Routes>
+            <Route path="/Cart" element={<CartComponent/>}/>
+            <Route path="/UserProfile" element={<UserProfile/>}/>
             <Route path="/" element={<HomePage/>} />
             <Route path="/Electronics" element={<Electronics/>} />
             <Route path="/Mens" element={<Mens/>} />
             <Route path="/Womens" element={<Womens/>} />
-            <Route path="/Map" element={<Map/>}/>
+            <Route path="/jwellery" element={<JewelryPage/>}/>
             <Route path="*" element={<PageNotFound/>}/>
         </Routes>
         
     </div>
 }
-export default App;

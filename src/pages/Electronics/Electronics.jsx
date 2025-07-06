@@ -26,6 +26,12 @@ export default function Electronics() {
           </div>
         ))}
       </div>
+      <br/>
+       <a href="/" className="back">Go Back Home</a>
+       <br/>
+      <span>
+        <p>&copy; {new Date().getFullYear()} Electronics. All rights reserved.</p>
+      </span>
     </div>
   );
 }

@@ -40,7 +40,7 @@ export default function HomePage() {
     color: '#666',
   };
 
-  return (
+  return (<>
     <div style={containerStyle}>
       <header style={headerStyle}>
         <h1>Welcome to MyApp</h1>
@@ -71,5 +71,5 @@ export default function HomePage() {
         <p>&copy; {new Date().getFullYear()} MyApp. All rights reserved.</p>
       </footer>
     </div>
-  );
+  </>);
 }

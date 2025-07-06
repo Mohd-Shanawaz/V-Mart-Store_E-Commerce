@@ -7,6 +7,7 @@ export default function Mens() {
     { id: 2, name: 'Denim Jacket', price: '$80', img: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/h/x/3/m-no-920-denim-bj-10-mevan-original-imah7efyhfuv3jbd.jpeg?q=70' },
     { id: 3, name: 'Casual Sneakers', price: '$60', img: 'https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/l/z/v/9-brd-1240-9-birde-green-white-original-imahbwdcdqcsxu3k.jpeg?q=70' },
   ];
+ 
 
   return (
     <div className="mens-container">
@@ -14,17 +15,25 @@ export default function Mens() {
         <h1>Men's Collection</h1>
         <p>Explore our latest styles for men</p>
       </header>
-
       <div className="mens-products">
         {products.map(product => (
           <div key={product.id} className="mens-card">
             <img src={product.img} alt={product.name} />
             <h3>{product.name}</h3>
             <p className="price">{product.price}</p>
-            <button className="buy-btn">Buy Now</button>
+            <button className="buy-btn" width="20px">Buy Now</button>
           </div>
         ))}
+        
       </div>
-    </div>
+      <br/>
+      <a href="/" className="back">Go Back Home</a>
+      <br/>
+      <span>
+        <p>&copy; {new Date().getFullYear()} Mens Wear. All rights reserved.</p>
+      </span>
+      </div>
+      
+    
   );
 }

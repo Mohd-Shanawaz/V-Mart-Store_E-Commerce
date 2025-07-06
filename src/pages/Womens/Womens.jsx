@@ -25,6 +25,12 @@ export default function Womens() {
           </div>
         ))}
       </div>
+      <br/>
+      <a href="/" className="back">Go Back Home</a>
+      <br/>
+      <span>
+        <p>&copy; {new Date().getFullYear()} Womens Wear. All rights reserved.</p>
+      </span>
     </div>
   );
 }

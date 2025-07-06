@@ -56,3 +56,21 @@
 .buy-btn:hover {
   background-color: #005fa3;
 }
+
+.back{
+  margin: auto;
+  max-width: 105px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  background-color: #1e40af;
+  color: #fff;
+  border: none;
+  border-radius: 6px;;
+  cursor: pointer;
+  text-decoration: none;
+}
+.back:hover{
+  background-color: #1e40af;
+}
+
+
