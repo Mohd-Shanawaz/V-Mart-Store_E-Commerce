@@ -1,0 +1,36 @@
+.card {
+  width: 270px;
+  text-align: center;
+  box-shadow: 0 0 17px rgb(23, 160, 2);
+  padding: 20px;
+  background-color: rgb(219, 217, 217);
+  gap: 10px;
+}
+.card img{
+    border-radius: 20px ;
+}
+.card h4 {
+  margin: 10px 0px;
+  color: rgb(5, 75, 5);
+}
+.card p {
+  margin-bottom: 7px;
+}
+.card button {
+  padding: 5px 20px;
+  margin-right: 5px;
+}
+button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cart{
+    background-color:coral;
+}
+.cart:hover{
+    background-color: lightsalmon;
+    cursor: pointer;
+}
+.detailbtn{
+    background-color: bisque;
+    color: blue;
+}

@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Products from '../Products/Products';
 
 export default function HomePage() {
+
+  const [state,setstate] = useState([]);
   const containerStyle = {
     fontFamily: 'Arial, sans-serif',
     padding: '2rem',
@@ -46,7 +49,6 @@ export default function HomePage() {
         <h1>Welcome to MyApp</h1>
         <p>Your simple React homepage with inline styling</p>
       </header>
-
       <main>
         <section>
           <h2 style={{ textAlign: 'center' }}>Features</h2>
@@ -66,7 +68,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
+      {/* <span><Products/></span> */}
       <footer style={footerStyle}>
         <p>&copy; {new Date().getFullYear()} MyApp. All rights reserved.</p>
       </footer>
