@@ -1,13 +1,28 @@
-
 import { useState, useEffect } from "react";
 import "./Products.css";
-import { getProducts } from "../../Services/service";
 import Product from "../Product/Product";
+import {getProducts} from "../../Services/service"
 
 function Products({ title }) {
   const [state, setState] = useState([]);
 
+useEffect(()=>{
+  // getProducts().then((res)=>{setState(res)})
+ fetchProducts()
 
+},[])
+
+const fetchProducts = async()=>{
+const res = await getProducts()
+console.log(res)
+if(res.status===200){
+  setState(res.data.products)
+}else{
+  setState([])
+}
+}
+
+console.log(state,"::")
 
   return (
     <div className="products">
@@ -25,7 +40,6 @@ function Products({ title }) {
           </p>
         </div>
       </div>
-<button id="getbtn" onClick={()=>{getProducts(setState)}}>Get Products</button>
       <div className="product">
         {state.length > 0 &&
           state

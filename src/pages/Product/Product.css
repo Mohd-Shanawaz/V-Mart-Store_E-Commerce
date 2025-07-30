@@ -31,6 +31,10 @@ button{
     cursor: pointer;
 }
 .detailbtn{
-    background-color: bisque;
+    background-color: rgb(238, 192, 137);
     color: blue;
+}
+.detailbtn:hover{
+  background-color:bisque;
+  color:blue;
 }

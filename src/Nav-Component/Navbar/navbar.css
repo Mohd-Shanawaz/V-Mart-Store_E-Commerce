@@ -58,15 +58,20 @@
 #links a:hover{
     color: blue;
     transform: scale(1.1);
+    cursor:pointer;
 }
 #links a:active{
     color: greenyellow;
 }
 #opt i:hover{
     color: yellow;
+    transform:scale(1.04);
+    cursor:pointer;
 }
 #opt button:hover{
     background-color: red;
     color:white;
     transform: scale(1.1);
+    cursor:pointer;
 }
+

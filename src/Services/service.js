@@ -1,13 +1,16 @@
 import axios from "axios";
-export const getProducts = (setState) => {
-  axios
-    .get("https://fakestoreapi.com/products")
-    .then((res) => {
-      console.log(res.data);
-      setState(res.data);
-    })
-    .catch((error) => {
-      alert("failed to get the data");
-      console.log(error);
-    });
+import { useState } from "react";
+
+export const getProducts = () => {
+
+  
+  
+ return axios.get('https://fakestoreapi.in/api/products')
+      .then(response => {
+        return response
+      })
+      .catch(error => {
+        
+        console.error('Error fetching products:', error);
+      });
 };

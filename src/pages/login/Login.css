@@ -1,0 +1,92 @@
+
+*{
+  text-align: center;
+}
+body{
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  padding: 40px;
+  width: 350px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.logo {
+  margin-bottom: 50px;
+  width: 175px;
+  margin-bottom: 30px;
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #dbdbdb;
+  background-color: #fafafa;
+  border-radius: 3px;
+}
+
+.login-form button {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.divider {
+  margin: 20px 0;
+  font-size: 13px;
+  color: #8e8e8e;
+}
+
+.facebook-login {
+  background: none;
+  border: none;
+  color: #385185;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signup-box {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 350px;
+  padding: 30px;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+
+.signup-box a {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+
+span{
+  text-align: center;
+  color: red;
+}
