@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
- import Products from '../Products/Products'; 
+import Products from '../Products/Products'; 
+import Navbar from '../../Nav-Component/Navbar/Navbar'
 
 export default function HomePage() {
   const [state, setstate] = useState([]);
@@ -65,7 +66,7 @@ export default function HomePage() {
       <div style={containerStyle}>
         <header style={headerStyle}>
           <h1>Welcome to MyApp</h1>
-          <p>Your simple React homepage with inline styling</p>
+          <p>My simple React homepage  of Carasoul Effect with inline styling</p>
         </header>
         <section style={{ maxWidth: '800px', margin: 'auto' }}>
           <Slider {...settings}>

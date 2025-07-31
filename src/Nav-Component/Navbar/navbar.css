@@ -1,6 +1,10 @@
 *{
     margin: 0;
 }
+.container{
+    display:flex;
+    flex-direction:column;
+}
 .head{
     height: 110px;
     background-color: black;
@@ -10,21 +14,23 @@
 }
 .logo{
     color: white;
-    width:33%;
     text-align: center;
-    text-align: center;
-    margin-top:20px ;
+    margin-top:20px;
+    font-size:22px;
+    padding:10px 10px 10px 100px;
 }
-.logo h1{
-    font-size: 50px;
+.vmart{
+    display:flex;
+}
+ h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #links{
-    width: 50%;
-    font-size: x-large;
+    width: 40%;
+    font-size: 30px;
     margin: 30px auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
  a{
     text-decoration: none;

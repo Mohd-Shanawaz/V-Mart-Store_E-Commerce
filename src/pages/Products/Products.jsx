@@ -1,15 +1,13 @@
 import { useState, useEffect } from "react";
 import "./Products.css";
 import Product from "../Product/Product";
-import {getProducts} from "../../Services/service"
+import {getProducts} from "../../services/service"
 
-function Products({ title }) {
+export default function Products() {
   const [state, setState] = useState([]);
 
 useEffect(()=>{
-  // getProducts().then((res)=>{setState(res)})
  fetchProducts()
-
 },[])
 
 const fetchProducts = async()=>{
@@ -22,30 +20,15 @@ if(res.status===200){
 }
 }
 
-console.log(state,"::")
-
   return (
     <div className="products">
-      <div className="brandContainer">
-        <div className="shadow">
-          <h1>{title} Information</h1>
-          <p style={{ color: "white", textAlign: "center" }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam et
-            optio laboriosam nostrum blanditiis aut error, cupiditate doloremque
-            ipsa? Laboriosam totam fuga eligendi eveniet quam distinctio maxime
-            ducimus quaerat libero, exercitationem culpa perspiciatis tempore
-            velit reiciendis dignissimos similique! Quaerat, quisquam ut
-            asperiores repudiandae nesciunt iure, saepe id quis et natus quam
-            nihil fuga aspernatur aliquid facere atque officia, vel voluptates?
-          </p>
-        </div>
-      </div>
       <div className="product">
         {state.length > 0 &&
           state
             .map((product) => {
               return (
                 <Product
+                  id={product.id}
                   image={product.image}
                   title={product.title}
                   price={product.price}
@@ -56,13 +39,3 @@ console.log(state,"::")
     </div>
   );
 }
-
-export default Products;
-
-//   useEffect(() => {
-//     getProducts(setState);
-//   }, []); --> 9 - 11
-
-// .filter((product) => {
-            //   return product.category === title;
-            // })  --> 32

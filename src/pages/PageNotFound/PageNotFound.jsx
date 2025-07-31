@@ -6,7 +6,7 @@ export default function PageNotFound() {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100vh',
+    height:'78vh',
     backgroundColor: '#f8f9fa',
     textAlign: 'center',
     fontFamily: 'Segoe UI, sans-serif',

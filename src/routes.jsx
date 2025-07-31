@@ -6,18 +6,22 @@ import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import CartComponent from "./Nav-Component/Carts/Carts";
 import UserProfile from "./Nav-Component/Profile-Page/UserProfile";
 import Products from "./pages/Products/Products";
+import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Navbar from "./Nav-Component/Navbar/Navbar";
 
 
 export default function RoutingPage(){
     return <div>
         <BrowserRouter>
+        <Navbar/>
            <Routes>
-             <Route path="/" element={<Navbar/>} />
-             <Route path="/Login" element={<Login/>}/>
+             <Route path="/" element={<HomePage/>} />
+             <Route path="/login" element={<Login/>}/>
              <Route path="/sign-up" element={<Signup/>}/>
-             <Route path="/Cart" element={<CartComponent/>}/>
-             <Route path="/UserProfile" element={<UserProfile/>}/>
+             <Route path="/cart" element={<CartComponent/>}/>
+             <Route path="/products" element={<Products/>}/>
+             <Route path="/productdetails/:id" element={<ProductDetails/>}/>
+             <Route path="/userProfile" element={<UserProfile/>}/>
              <Route path="*" element={<PageNotFound/>}/>
            </Routes>
         </BrowserRouter>
