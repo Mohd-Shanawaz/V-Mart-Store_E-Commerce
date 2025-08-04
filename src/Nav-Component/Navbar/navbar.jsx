@@ -4,7 +4,7 @@ import HomePage from "../../pages/Home/Home";
 
 export default function Navbar() {
   return (
-    <div classname="container">
+    <div className="container">
     <div className="head">
       <div className="logo">
         <h1 className="vmart">V - Mart</h1>
@@ -16,7 +16,7 @@ export default function Navbar() {
         <Link to="/about">About Us</Link>
       </div>
       <div id="opt">
-        <Link to ="/cart"><i className="bi bi-cart4" id="CartLogo"></i></Link>
+        <Link to ="/cart/:id"><i className="bi bi-cart4" id="CartLogo"></i></Link>
         <Link to="/userProfile"><i className="bi bi-person-circle"></i></Link>
         <button>Log Out</button>
       </div>

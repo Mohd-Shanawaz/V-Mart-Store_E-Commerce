@@ -62,7 +62,7 @@
     margin-top:7px;
 }
 #links a:hover{
-    color: blue;
+    color: rgb(0, 0, 255);
     transform: scale(1.1);
     cursor:pointer;
 }

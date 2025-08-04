@@ -3,7 +3,7 @@ import HomePage from "./pages/Home/Home";
 import Login from "./pages/login/Login";
 import Signup from "./pages/sign-up/Signup";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
-import CartComponent from "./Nav-Component/Carts/Carts";
+import CartComponent from "./pages/cart/Cart";
 import UserProfile from "./Nav-Component/Profile-Page/UserProfile";
 import Products from "./pages/Products/Products";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
@@ -18,7 +18,7 @@ export default function RoutingPage(){
              <Route path="/" element={<HomePage/>} />
              <Route path="/login" element={<Login/>}/>
              <Route path="/sign-up" element={<Signup/>}/>
-             <Route path="/cart" element={<CartComponent/>}/>
+             <Route path="/cart/:id" element={<CartComponent/>}/>
              <Route path="/products" element={<Products/>}/>
              <Route path="/productdetails/:id" element={<ProductDetails/>}/>
              <Route path="/userProfile" element={<UserProfile/>}/>

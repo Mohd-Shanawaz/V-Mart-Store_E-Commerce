@@ -1,23 +1,29 @@
 import React from "react";
 import "./Product.css";
-import ProductDetails from "../ProductDetails/ProductDetails";
 import { useNavigate } from "react-router-dom";
 
-function Product({ image, title, price,id }) {
+function Product({ image, title, price, id, discount }) {
   const navigate = useNavigate();
-    const handleRoute = ()=>{
+    const handleProduct = ()=>{
         navigate(`/productdetails/${id}`)
+    }
+    function handleCart (){
+      navigate(`/cart/${id}`)
     }
 
   return (
-    <div className="card">
-      <img src={image} alt="" width={270} height={230} />
-      <h4>{title}</h4>
-      <p>${price}</p>
-      <p>{id}</p>
+    <div className="card" >
+      <div onClick={handleProduct}>
+      <img src={image} alt="" width={270} height={230}  className="imageclass"/><br />
+      <h4  className="imageclass" id="title">{title}</h4><br />
+      <h3 
+       className="imageclass" > Price : <span id="price">$ {price}</span></h3><br />
+      <h3  className="imageclass">Discount : <span >{discount} %</span></h3><br />
+      </div>
       <div>
-        <button className="detailbtn" onClick={handleRoute}>Product Details</button>
-        <button className="cart">Add to Cart</button>
+        
+        <button className="cart" onClick={handleCart}>Add to Cart</button>
+        <button className="detailbtn" >Buy Now</button>
       </div>
     </div>
   );

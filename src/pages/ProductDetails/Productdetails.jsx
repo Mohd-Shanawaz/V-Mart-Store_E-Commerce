@@ -1,24 +1,55 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import axios from "axios";
+import "./ProductDetails.css";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductDetails() {
-  const { id } = useParams(); // get 'id' from URL
   const [product, setProduct] = useState(null);
+  const { id } = useParams(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`https://fakestoreapi.in/api/products/${id}`)
-      .then(res => setProduct(res.data))
-      .catch(error => console.error(error));
-  }, [id]);
+  axios.get(`https://fakestoreapi.in/api/products/${id}`)
+    .then(res => { 
+      console.log(res.data.product)
+      setProduct(res.data.product);
+    })
+    .catch(error => console.error("Error fetching product:", error));
+}, [id]);
 
+ if (!product) {
+  return <h2>Loading product...</h2>;
+}
+
+function handleRouting(){
+  navigate(`/cart/${id}`)
+}
   return (
     <div>
       <h1>Product Details</h1>
-      <img src={product.image} alt={product.title} width="150" />
-      <h2>{product.title}</h2>
-      <p>Price: ${product.price}</p>
-      <p>{product.description}</p>
+       <div className="productinfo">
+
+            <div className="section1">
+               <div className="productimage">
+                  <img src={product.image} className="productimg"/> <br />
+               </div>
+                <div className="buttons">
+                  <button className="cartbtn" onClick={handleRouting}>Add To Cart</button><button className="buybtn">Buy Now</button>
+                </div>
+             </div>
+
+         <div className="productdetails">
+            <h2><span>Product:</span> {product.title}</h2><br/>
+            <h3><span>Price:</span> $ {product.price}</h3><br/>
+            {/* <h3><span>Descriotion:</span> {product.description}</h3><br/> */}
+            <h3><span>Brand:</span> {product.brand}</h3><br/>
+            <h3><span>model:</span> {product.model}</h3><br/>
+            <h3><span>color:</span> {product.color===undefined?" - ":product.color}</h3><br/>
+            <h3><span>category:</span> {product.category}</h3><br/>
+            <h3><span>discount:</span> {product.discount===undefined?0:product.discount}%</h3><br/>
+          </div> 
+       </div>
     </div>
   );
 }

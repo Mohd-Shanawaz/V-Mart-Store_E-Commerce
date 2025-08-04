@@ -23,6 +23,7 @@ if(res.status===200){
   return (
     <div className="products">
       <div className="product">
+        
         {state.length > 0 &&
           state
             .map((product) => {
@@ -32,6 +33,7 @@ if(res.status===200){
                   image={product.image}
                   title={product.title}
                   price={product.price}
+                  discount={product.discount}
                 />
               );
             })}

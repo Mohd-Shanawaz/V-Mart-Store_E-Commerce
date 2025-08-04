@@ -1,15 +1,16 @@
 .card {
   width: 270px;
   text-align: center;
-  box-shadow: 0 0 17px rgb(23, 160, 2);
+  box-shadow: 0 0 17px ;
   padding: 20px;
-  background-color: rgb(219, 217, 217);
+  background-color: rgb(230, 226, 226);
   gap: 10px;
+  border-radius:  0 40px  0 40px;
 }
 .card img{
     border-radius: 20px ;
 }
-.card h4 {
+#title {
   margin: 10px 0px;
   color: rgb(5, 75, 5);
 }
@@ -19,6 +20,9 @@
 .card button {
   padding: 5px 20px;
   margin-right: 5px;
+  border-radius: 5px;
+  font-weight:bold;
+  font-size:13px;
 }
 button{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,7 +31,7 @@ button{
     background-color:coral;
 }
 .cart:hover{
-    background-color: lightsalmon;
+    background-color: rgb(255, 47, 0);
     cursor: pointer;
 }
 .detailbtn{
@@ -35,6 +39,14 @@ button{
     color: blue;
 }
 .detailbtn:hover{
-  background-color:bisque;
+  background-color:rgb(255, 187, 0);
   color:blue;
+}
+.imageclass{
+  cursor: pointer;
+}
+
+#price{
+  color: rgb(193, 0, 154);
+  font-size: large;
 }

@@ -2,13 +2,28 @@
   font-family: Arial, sans-serif;
   padding: 2rem;
   background-color: #f5f5f5;
-  min-height: 70vh;
   color: #333;
 }
 
 .home-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.slider-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+.slider-image {
+  width: 100%;
+  border-radius: 10px;
+  height: 50vh;
+}
+
+.features-title {
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .card-container {
@@ -20,19 +35,33 @@
 }
 
 .card {
-  background-color: #fff;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  box-shadow: 0 2px 8px ;
+  width: 200px;
   text-align: center;
 }
 
-.home-footer {
+.footer {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1.2rem;
   padding-top: 1rem;
   border-top: 1px solid #ccc;
   font-size: 0.9rem;
   color: #666;
+}
+.exploremore{
+  padding:5px 20px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+  background-color: aqua;
+  color: black;
+  border-radius:5px;
+}
+.exploremore:hover{
+  background-color: aquamarine;
+  cursor: pointer;
+  transform:scale(1.1);
 }
