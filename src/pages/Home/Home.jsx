@@ -43,6 +43,7 @@ export default function HomePage() {
                   alt={`Slide ${i}`}
                   className="slider-image"
                   onClick={exploreProducts}
+                  title='Click to explore products'
                 />
               </div>
             ))}

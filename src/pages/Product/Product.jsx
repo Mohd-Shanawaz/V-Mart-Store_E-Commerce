@@ -1,8 +1,11 @@
 import React from "react";
 import "./Product.css";
 import { useNavigate } from "react-router-dom";
+// import { useState } from "react";
 
 function Product({ image, title, price, id, discount }) {
+  // const [inCart, setInCart] = useState(true)
+
   const navigate = useNavigate();
     const handleProduct = ()=>{
         navigate(`/productdetails/${id}`)
@@ -10,6 +13,10 @@ function Product({ image, title, price, id, discount }) {
     function handleCart (){
       navigate(`/cart/${id}`)
     }
+
+    const handleCartToggle = () => {
+    setInCart(prev => !prev);
+    };
 
   return (
     <div className="card" >
@@ -22,7 +29,7 @@ function Product({ image, title, price, id, discount }) {
       </div>
       <div>
         
-        <button className="cart" onClick={handleCart}>Add to Cart</button>
+        <button className="cart" onClick={handleCart}>Add To Cart</button>
         <button className="detailbtn" >Buy Now</button>
       </div>
     </div>

@@ -13,11 +13,11 @@ export default function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
         <Link to="/users">Users</Link>
-        <Link to="/about">About Us</Link>
+        <Link to="/about">About Me</Link>
       </div>
       <div id="opt">
         <Link to ="/cart/:id"><i className="bi bi-cart4" id="CartLogo"></i></Link>
-        <Link to="/userProfile"><i className="bi bi-person-circle"></i></Link>
+        <Link to="/users"><i className="bi bi-person-circle"></i></Link>
         <button>Log Out</button>
       </div>
     </div>

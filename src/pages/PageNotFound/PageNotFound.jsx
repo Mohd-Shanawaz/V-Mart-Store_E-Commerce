@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function PageNotFound() {
   const containerStyle = {
@@ -49,7 +50,7 @@ export default function PageNotFound() {
       <p style={textStyle}>
         Oops! The page you're looking for doesn't exist or has been moved.
       </p>
-      <a href="/" style={buttonStyle}>Go Back Home</a>
+      <Link to="/" style={buttonStyle}>Go Back Home</Link>
     </div>
   );
 }

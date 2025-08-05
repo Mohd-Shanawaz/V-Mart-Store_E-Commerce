@@ -1,51 +1,27 @@
 import React, { useEffect, useState } from "react";
 import "./Cart.css";
-import axios from "axios";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import useCartContext from "./CartLogics"; //here useCartContext is my custom Hook
 
 export default function CartComponent() {
   const { id } = useParams();
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useCartContext(id);
+  const [show, setShow] = useState(false);
+  const [hide, setHide] = useState(true);
+  const navigate = useNavigate("")
 
-  // 🧲 Load cart from localStorage and add new product from API if any
-  useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("myCart")) || [];
+  useEffect(()=>{
+    const timer = setTimeout(() => {
+      setShow(true);
+    }, 3000);
 
-    if (id) {
-      axios.get("https://fakestoreapi.in/api/products")
-        .then((res) => {
-          const allProducts = res.data.products;
-          const product = allProducts.find((item) => item.id === Number(id));
+    const timer2 = setTimeout(()=>{
+      setHide(false);
+    },3000)
 
-          if (product) {
-            const alreadyInCart = savedCart.find(item => item.id === product.id);
-            const newCart = alreadyInCart
-              ? savedCart.map(item =>
-                  item.id === product.id
-                    ? { ...item, quantity: item.quantity + 1 }
-                    : item
-                )
-              : [...savedCart, { ...product, quantity: 1 }];
-
-            setCart(newCart);
-          } else {
-            console.warn("Product not found with id:", id);
-            setCart(savedCart); // Just use saved cart
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-          setCart(savedCart); // If error, use saved cart
-        });
-    } else {
-      setCart(savedCart);
-    }
-  }, [id]);
-
-  // 💾 Save cart to localStorage on every cart update
-  useEffect(() => {
-    localStorage.setItem("myCart", JSON.stringify(cart));
-  }, [cart]);
+    return () => clearTimeout(timer2);
+  },[])
 
   const incrementQty = (id) => {
     const updatedCart = cart.map((item) =>
@@ -80,6 +56,10 @@ export default function CartComponent() {
     0
   );
 
+  const handleShop = ()=>{
+    navigate("/products")
+  }
+
   return (
     <div className="cart-container">
       <div className="cart-heading">
@@ -108,7 +88,16 @@ export default function CartComponent() {
           </div>
         ))
       ) : (
-        <p>Loading Cart ..... or product not found</p>
+        <div>
+           {hide && <h4>Loading Cart ..... <br/><br /> or <br/><br />product not found</h4>}
+           <br /><br />
+           {show && 
+           <div>
+            <h2 style={{color:"green"}}>Your cart is Empty </h2><br />
+            <button onClick={handleShop} className="shop">Shop Now</button>
+          </div>}
+        </div>
+       
       )}
 
       {cart.length > 0 && (

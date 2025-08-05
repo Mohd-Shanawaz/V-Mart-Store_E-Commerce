@@ -20,6 +20,9 @@
   border-radius: 10px;
   height: 50vh;
 }
+.slider-wrapper:hover{
+  cursor: pointer;
+}
 
 .features-title {
   text-align: center;
