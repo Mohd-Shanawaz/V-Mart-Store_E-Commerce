@@ -25,6 +25,7 @@ export default function ProductDetails() {
 function handleRouting(){
   navigate(`/cart/${id}`)
 }
+const handleBuy =()=> {navigate(`/buyproduct/${id}`)}
   return (
     <div>
       <h1>Product Details</h1>
@@ -35,7 +36,7 @@ function handleRouting(){
                   <img src={product.image} className="productimg"/> <br />
                </div>
                 <div className="buttons">
-                  <button className="cartbtn" onClick={handleRouting}>Add To Cart</button><button className="buybtn">Buy Now</button>
+                  <button className="cartbtn" onClick={handleRouting}>Add To Cart</button><button className="buybtn" onClick={handleBuy}>Buy Now</button>
                 </div>
              </div>
 

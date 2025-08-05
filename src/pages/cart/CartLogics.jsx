@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 export default function useCartContext(){ // useCartContext is my custom Hook
-     const { id } = useParams();
+  const { id } = useParams();
   const [cart, setCart] = useState([]);
 
   useEffect(() => {

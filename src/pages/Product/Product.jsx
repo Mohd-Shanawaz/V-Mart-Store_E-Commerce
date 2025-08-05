@@ -18,6 +18,9 @@ function Product({ image, title, price, id, discount }) {
     setInCart(prev => !prev);
     };
 
+    const handleBuy = ()=>{
+      navigate(`/buyproduct/${id}`)
+    }
   return (
     <div className="card" >
       <div onClick={handleProduct}>
@@ -30,7 +33,7 @@ function Product({ image, title, price, id, discount }) {
       <div>
         
         <button className="cart" onClick={handleCart}>Add To Cart</button>
-        <button className="detailbtn" >Buy Now</button>
+        <button className="detailbtn" onClick={handleBuy}>Buy Now</button>
       </div>
     </div>
   );

@@ -46,9 +46,9 @@ export default function CartComponent() {
 
   const handleBuy = () => {
     if (cart.length === 0) return alert("Cart is empty.");
-    alert("Thank you for purchasing!");
-    setCart([]);
-    localStorage.removeItem("myCart");
+    navigate(`/buyproduct/${id}`)
+    // setCart([]);
+    // localStorage.removeItem("myCart");
   };
 
   const total = cart.reduce(
@@ -63,7 +63,7 @@ export default function CartComponent() {
   return (
     <div className="cart-container">
       <div className="cart-heading">
-        <h2>V-Mart 🛒 Cart</h2>
+        <h2>V-Mart 🛒 Cart 🛍️ </h2>
       </div>
 
       {cart.length > 0 ? (

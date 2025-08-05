@@ -21,12 +21,12 @@ export default function AllUsers(){
             <thead>
                 <tr>
                    <th style={{padding:"3px",borderRadius:"10px 10px 0 0 ",margin:"10px",color:"yellow"}}>
-                    <th style={{width:"30px"}}>ID</th>
-                    <th style={{width:"120px"}}>ID</th>
-                    <th style={{width:"150px"}}>Name</th>
-                    <th style={{width:"200px"}}>Address</th>
-                    <th style={{width:"220px"}}>Phone</th>
-                    <th style={{width:"150px"}}>Password</th>
+                    <th style={{width:"30px",borderTopLeftRadius:"10px"}}>ID</th>
+                    <th style={{width:"117px"}}>Name</th>
+                    <th style={{width:"148px"}}>UserName</th>
+                    <th style={{width:"192px"}}>Address</th>
+                    <th style={{width:"240px"}}>Phone</th>
+                    <th style={{width:"150px",borderTopRightRadius:"10px"}}>Password</th>
                    </th> 
                 </tr>
             </thead>
