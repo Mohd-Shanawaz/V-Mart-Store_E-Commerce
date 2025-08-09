@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./ProductDetails.css";
-import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function ProductDetails() {
   const [product, setProduct] = useState(null);
   const { id } = useParams(); 
   const navigate = useNavigate();
+  
 
+function handleBuy (){ alert("hello");}
   useEffect(() => {
   axios.get(`https://fakestoreapi.in/api/products/${id}`)
     .then(res => { 
@@ -24,8 +26,12 @@ export default function ProductDetails() {
 
 function handleRouting(){
   navigate(`/cart/${id}`)
+  toast.success(`Added product to Cart with id no : ${id} `)
 }
-const handleBuy =()=> {navigate(`/buyproduct/${id}`)}
+function handlePurchase(){
+  navigate(`/buyproduct/${id}`)
+}
+
   return (
     <div>
       <h1>Product Details</h1>
@@ -36,7 +42,7 @@ const handleBuy =()=> {navigate(`/buyproduct/${id}`)}
                   <img src={product.image} className="productimg"/> <br />
                </div>
                 <div className="buttons">
-                  <button className="cartbtn" onClick={handleRouting}>Add To Cart</button><button className="buybtn" onClick={handleBuy}>Buy Now</button>
+                  <button className="cartbtn" onClick={handleRouting}>Add To Cart</button><button className="buybtn" onClick={handlePurchase}>Buy Now</button>
                 </div>
              </div>
 

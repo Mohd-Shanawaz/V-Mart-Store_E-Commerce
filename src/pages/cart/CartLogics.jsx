@@ -3,12 +3,12 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 export default function useCartContext(){ // useCartContext is my custom Hook
-  const { id } = useParams();
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(()=>{
+     const savedCart = JSON.parse(localStorage.getItem("myCart")) || [];
+  });
 
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("myCart")) || [];
-
     if (id) {
       axios.get("https://fakestoreapi.in/api/products")
         .then((response) => {

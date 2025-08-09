@@ -1,6 +1,7 @@
 import React from "react";
 import "./Product.css";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
 // import { useState } from "react";
 
 function Product({ image, title, price, id, discount }) {
@@ -12,12 +13,9 @@ function Product({ image, title, price, id, discount }) {
     }
     function handleCart (){
       navigate(`/cart/${id}`)
+      toast.success(`Product Added to Cart with id : ${id}`)
     }
-
-    const handleCartToggle = () => {
-    setInCart(prev => !prev);
-    };
-
+    
     const handleBuy = ()=>{
       navigate(`/buyproduct/${id}`)
     }

@@ -2,14 +2,78 @@ import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import useCartContext from "./CartLogics"; //here useCartContext is my custom Hook
+import axios from "axios";
 
 export default function CartComponent() {
-  const { id } = useParams();
-  const [cart, setCart] = useCartContext(id);
   const [show, setShow] = useState(false);
   const [hide, setHide] = useState(true);
   const navigate = useNavigate("")
+  const { id } = useParams();
+  const [cart, setCart] = useState([]);
+
+  // useEffect(() => {
+  //   const savedCart = JSON.parse(localStorage.getItem("myCart")) || [];
+
+  //   if (id) {
+  //       axios.get("https://fakestoreapi.in/api/products")
+  //       .then((response) => {
+  //         const allProducts = response.data.products;
+  //         const product =  allProducts.find((product) => product.id === Number(id));
+
+  //         if (product) {
+  //           const alreadyInCart = savedCart.find(item => item.id === product.id);
+  //           const newCart = alreadyInCart
+  //             ? savedCart.map(item =>
+  //                 item.id === product.id
+  //                   ? { ...item, quantity: item.quantity + 1 }
+  //                   : item
+  //               )
+  //             : [...savedCart, { ...product, quantity: 1 }];
+
+  //           setCart(newCart);
+  //         } else {
+  //           console.warn("Product not found with id:", id);
+  //           setCart(savedCart); 
+  //         }
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //         setCart(savedCart); 
+  //       });
+  //   } else {
+  //     setCart(savedCart);
+  //   }
+  // }, [id]);
+
+  useEffect(() => {
+  const savedCart = JSON.parse(localStorage.getItem("myCart")) || [];
+
+  if (id) {
+    axios.get("https://fakestoreapi.in/api/products")
+      .then((response) => {
+        const allProducts = response.data.products;
+        const product = allProducts.find((product) => product.id === Number(id));
+
+        if (product) {
+          const alreadyInCart = savedCart.find(item => item.id === product.id);
+
+          if (!alreadyInCart) {
+            savedCart.push({ ...product, quantity: 1 });
+            localStorage.setItem("myCart", JSON.stringify(savedCart));
+            setCart(savedCart);
+          } else {
+            // If already in cart, just load it
+            setCart(savedCart);
+          }
+        }
+      });
+  }
+}, [id]);
+
+  useEffect(() => {
+    localStorage.setItem("myCart", JSON.stringify(cart));
+  }, [cart]);
+
 
   useEffect(()=>{
     const timer = setTimeout(() => {
@@ -61,11 +125,12 @@ export default function CartComponent() {
   }
 
   return (
+    
     <div className="cart-container">
       <div className="cart-heading">
         <h2>V-Mart 🛒 Cart 🛍️ </h2>
       </div>
-
+      {console.log(cart)}
       {cart.length > 0 ? (
         cart.map((item) => (
           <div className="cart-card" key={item.id}>
